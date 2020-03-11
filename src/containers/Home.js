@@ -74,7 +74,7 @@ export default class Home extends Component {
 
     handleViewOwners = async() => {
         const { link } = this.state;
-        this.setState({ modalOpened: true });
+        this.setState({ modalOpened: true, balances: null });
 
         const res = await fetchOwners(link)
         const owners = res.data;
@@ -83,7 +83,7 @@ export default class Home extends Component {
 
     handleViewBalances = async() => {
         const { link, accountId } = this.state;
-        this.setState({ modalOpened: true });
+        this.setState({ modalOpened: true, owners: null });
 
         const res = await fetchBalances(link, accountId)
         const balances = res.data;
