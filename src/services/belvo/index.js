@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'http://ec2-54-211-132-29.compute-1.amazonaws.com';
 
 export const fetchToken = () => {
-    console.log('fetching token')
     return axios.get(`${BASE_URL}/token`)
 }
 
